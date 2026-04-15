@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Medical Center Design System
+   Clean, clinical aesthetic with accessible contrast ratios
+   All colors in HSL format
+*/
+
+@layer base {
+  :root {
+    /* Base colors - Clean clinical whites */
+    --background: 210 20% 99%;
+    --foreground: 215 25% 15%;
+
+    /* Card surfaces */
+    --card: 0 0% 100%;
+    --card-foreground: 215 25% 15%;
+
+    /* Popover surfaces */
+    --popover: 0 0% 100%;
+    --popover-foreground: 215 25% 15%;
+
+    /* Primary - Medical teal-blue */
+    --primary: 187 70% 38%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary - Soft gray-blue */
+    --secondary: 210 20% 96%;
+    --secondary-foreground: 215 25% 25%;
+
+    /* Muted tones */
+    --muted: 210 15% 95%;
+    --muted-foreground: 215 15% 45%;
+
+    /* Accent - Soft teal highlight */
+    --accent: 187 50% 95%;
+    --accent-foreground: 187 70% 30%;
+
+    /* Destructive - Medical red (softer) */
+    --destructive: 0 65% 55%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success - Medical green */
+    --success: 152 55% 40%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning - Soft amber */
+    --warning: 38 92% 50%;
+    --warning-foreground: 38 92% 15%;
+
+    /* Info - Light blue */
+    --info: 199 89% 48%;
+    --info-foreground: 0 0% 100%;
+
+    /* Border and input */
+    --border: 210 20% 90%;
+    --input: 210 20% 90%;
+    --ring: 187 70% 38%;
+
+    /* Radius */
+    --radius: 0.5rem;
+
+    /* Sidebar - Light variant */
+    --sidebar-background: 210 20% 98%;
+    --sidebar-foreground: 215 20% 35%;
+    --sidebar-primary: 187 70% 38%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 187 50% 95%;
+    --sidebar-accent-foreground: 187 70% 30%;
+    --sidebar-border: 210 20% 92%;
+    --sidebar-ring: 187 70% 38%;
+
+    /* Chart colors */
+    --chart-1: 187 70% 38%;
+    --chart-2: 152 55% 40%;
+    --chart-3: 199 89% 48%;
+    --chart-4: 38 92% 50%;
+    --chart-5: 280 60% 55%;
+  }
+
+  .dark {
+    /* Dark mode - Soft slate/charcoal tones, no harsh blacks */
+    --background: 220 20% 12%;
+    --foreground: 210 20% 95%;
+
+    /* Card surfaces - Slightly elevated */
+    --card: 220 18% 16%;
+    --card-foreground: 210 20% 95%;
+
+    /* Popover surfaces */
+    --popover: 220 18% 16%;
+    --popover-foreground: 210 20% 95%;
+
+    /* Primary - Softer teal for dark mode */
+    --primary: 187 60% 50%;
+    --primary-foreground: 220 20% 10%;
+
+    /* Secondary */
+    --secondary: 220 15% 22%;
+    --secondary-foreground: 210 20% 90%;
+
+    /* Muted */
+    --muted: 220 15% 20%;
+    --muted-foreground: 215 15% 60%;
+
+    /* Accent */
+    --accent: 187 40% 20%;
+    --accent-foreground: 187 60% 70%;
+
+    /* Destructive */
+    --destructive: 0 55% 45%;
+    --destructive-foreground: 0 0% 100%;
+
+    /* Success */
+    --success: 152 45% 45%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning */
+    --warning: 38 80% 55%;
+    --warning-foreground: 38 92% 10%;
+
+    /* Info */
+    --info: 199 75% 55%;
+    --info-foreground: 0 0% 100%;
+
+    /* Border and input */
+    --border: 220 15% 25%;
+    --input: 220 15% 25%;
+    --ring: 187 60% 50%;
+
+    /* Sidebar - Dark variant */
+    --sidebar-background: 220 18% 14%;
+    --sidebar-foreground: 210 15% 75%;
+    --sidebar-primary: 187 60% 50%;
+    --sidebar-primary-foreground: 220 20% 10%;
+    --sidebar-accent: 187 40% 20%;
+    --sidebar-accent-foreground: 187 60% 70%;
+    --sidebar-border: 220 15% 22%;
+    --sidebar-ring: 187 60% 50%;
+
+    /* Chart colors - Adjusted for dark mode */
+    --chart-1: 187 60% 55%;
+    --chart-2: 152 50% 50%;
+    --chart-3: 199 75% 55%;
+    --chart-4: 38 80% 55%;
+    --chart-5: 280 55% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "rlig" 1, "calt" 1;
+  }
+
+  /* Smooth transitions for theme changes */
+  html {
+    transition: color-scheme 0.3s;
+  }
+
+  /* Focus visible styles */
+  :focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+
+  /* Scrollbar styling */
+  ::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-muted/30;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply bg-muted-foreground/20 rounded-full;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-muted-foreground/30;
+  }
+}
