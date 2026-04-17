@@ -16,6 +16,7 @@ import Dashboard from "./pages/Dashboard";
 import Patients from "./pages/Patients";
 import Doctors from "./pages/Doctors";
 import Departments from "./pages/Departments";
+import Services from "./pages/Services";
 import Appointments from "./pages/Appointments";
 import MedicalRecords from "./pages/MedicalRecords";
 import Prescriptions from "./pages/Prescriptions";
@@ -112,6 +113,14 @@ const App = () => (
                   element={
                     <ProtectedRoute allowedRoles={["admin", "user"]}>
                       <Departments />
+                    </ProtectedRoute>
+                  }
+                />
+                <Route
+                  path="/services"
+                  element={
+                    <ProtectedRoute allowedRoles={["admin", "user"]}>
+                      <Services />
                     </ProtectedRoute>
                   }
                 />

@@ -110,6 +110,18 @@ export interface Department {
   staffCount: number;
 }
 
+export interface Service {
+  id: string;
+  name: string;
+  code?: string;
+  description: string;
+  department_id?: number;
+  price: number;
+  duration: number;
+  status: "active" | "inactive";
+  department_name: string;
+}
+
 // Appointment types
 export interface Appointment {
   id: string;

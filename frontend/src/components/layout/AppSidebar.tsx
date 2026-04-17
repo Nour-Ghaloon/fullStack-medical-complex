@@ -13,6 +13,7 @@ import {
   UserCog,
   Bell,
   User,
+  Briefcase,
 } from "lucide-react";
 import { NavLink } from "@/components/NavLink";
 import { useAuth } from "@/hooks/useAuth";
@@ -59,6 +60,11 @@ const adminNavigationItems: NavItem[] = [
     title: "Departments",
     href: "/departments",
     icon: Building2,
+  },
+  {
+    title: "Services",
+    href: "/services",
+    icon: Briefcase,
   },
   {
     title: "Appointments",
