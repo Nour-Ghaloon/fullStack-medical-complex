@@ -393,7 +393,7 @@ export default function Users() {
                   <TableHead>User</TableHead>
                   <TableHead>Role</TableHead>
                   <TableHead>Created</TableHead>
-                  <TableHead>Last Login</TableHead>
+                 
                   <TableHead className="text-right">Actions</TableHead>
                 </TableRow>
               </TableHeader>
@@ -428,7 +428,7 @@ export default function Users() {
                       </Badge>
                     </TableCell>
                     <TableCell>{user.createdAt || "-"}</TableCell>
-                    <TableCell>{user.lastLogin || "-"}</TableCell>
+                   
                     <TableCell className="text-right">
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>

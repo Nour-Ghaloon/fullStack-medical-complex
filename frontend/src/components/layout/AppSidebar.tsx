@@ -71,11 +71,11 @@ const adminNavigationItems: NavItem[] = [
     href: "/appointments",
     icon: Calendar,
   },
-  {
-    title: "Medical Records",
-    href: "/records",
-    icon: ClipboardList,
-  },
+  // {
+  //   title: "Medical Records",
+  //   href: "/records",
+  //   icon: ClipboardList,
+  // },
   {
     title: "Prescriptions",
     href: "/prescriptions",
