@@ -386,7 +386,7 @@ const openScheduleDialog = (doctor: Doctor) => {
                     rows={3}
                   />
                 </div>
-                <div className="grid grid-cols-2 gap-4">
+                {/* <div className="grid grid-cols-2 gap-4">
                   <div className="grid gap-2">
                     <Label htmlFor="status">Status</Label>
                     <Select
@@ -408,7 +408,7 @@ const openScheduleDialog = (doctor: Doctor) => {
                       </SelectContent>
                     </Select>
                   </div>
-                </div>
+                </div> */}
               </div>
               <DialogFooter>
                 <Button variant="outline" onClick={() => setFormDialogOpen(false)}>
@@ -478,7 +478,7 @@ const openScheduleDialog = (doctor: Doctor) => {
                   <TableHead>Specialty</TableHead>
                   <TableHead>Department</TableHead>
                   <TableHead>Hire Date</TableHead>
-                  <TableHead>Status</TableHead>
+                  {/* <TableHead>Status</TableHead> */}
                   <TableHead className="text-right">Actions</TableHead>
                 </TableRow>
               </TableHeader>
@@ -502,13 +502,13 @@ const openScheduleDialog = (doctor: Doctor) => {
                     <TableCell>{doctor.specialty}</TableCell>
                     <TableCell>{doctor.department}</TableCell>
                     <TableCell>{doctor.hireDate || "N/A"}</TableCell>
-                    <TableCell>
+                    {/* <TableCell>
                       <Badge
                         variant={doctor.status === "active" ? "default" : "secondary"}
                       >
                         {doctor.status === "on_leave" ? "on leave" : doctor.status}
                       </Badge>
-                    </TableCell>
+                    </TableCell> */}
                     <TableCell className="text-right">
                       <DropdownMenu>
                         <DropdownMenuTrigger asChild>

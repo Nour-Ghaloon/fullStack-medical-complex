@@ -60,7 +60,7 @@ class AppointmentController extends Controller
             'doctor_id' => $request->doctor_id,
             'patient_id' => $request->patient_id,
             'date' => $request->date,
-            'start_time' => $request->start_time, // القادم من الطلب
+            'start_time' => $request->start_time, 
             'end_time'   => $endTime->format('H:i'),
             'notes' => $request->notes,
         ]);

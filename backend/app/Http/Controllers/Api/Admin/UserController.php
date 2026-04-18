@@ -31,7 +31,7 @@ class UserController extends Controller
         $request->validate([
             'name' => 'required|string|max:255',
             'email' => 'required|email|unique:users,email',
-            'password' => 'required|string|min:6',
+            'password' => 'required|string|min:8',
             'role' => [
                 'required',
                 Rule::exists('roles', 'name')->where('guard_name', 'api'),
@@ -68,13 +68,13 @@ class UserController extends Controller
         $request->validate([
             'name' => 'sometimes|string|max:255',
             'email' => 'sometimes|email|unique:users,email,' . $user->id,
-            'password' => 'sometimes|string|min:6',
+            'password' => 'sometimes|string|min:8',
             'role' => [
                 'sometimes',
                 Rule::exists('roles', 'name')->where('guard_name', 'api'),
             ],
         ]);
-        
+
         if ($request->has('name')) $user->name = $request->name;
         if ($request->has('email')) $user->email = $request->email;
         if ($request->has('password')) $user->password = Hash::make($request->password);

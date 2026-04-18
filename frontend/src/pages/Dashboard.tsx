@@ -412,11 +412,17 @@ export default function Dashboard() {
                       </Link>
                     </Button>
                     <Button asChild variant="outline" className="justify-between">
+                      <Link to="/services">
+                        Open Services
+                        <ArrowRight className="h-4 w-4" />
+                      </Link>
+                    </Button>
+                    {/* <Button asChild variant="outline" className="justify-between">
                       <Link to="/reports">
                         Open Reports
                         <ArrowRight className="h-4 w-4" />
                       </Link>
-                    </Button>
+                    </Button> */}
                     <Button asChild variant="outline" className="justify-between">
                       <Link to="/billing">
                         Review Billing
