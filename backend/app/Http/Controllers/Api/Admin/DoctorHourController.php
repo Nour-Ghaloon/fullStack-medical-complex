@@ -42,7 +42,6 @@ class DoctorHourController extends Controller
             'end_time'    => 'required|date_format:H:i|after:start_time',
         ]);
 
-        // استخدام updateOrCreate يجعل الكود أكثر مرونة
         $availability = DoctorHour::updateOrCreate(
             [
                 'doctor_id'   => $request->doctor_id,

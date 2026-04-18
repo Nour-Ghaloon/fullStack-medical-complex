@@ -16,11 +16,9 @@ class MedicalRecordController extends Controller
             ->get();
     }
 
-    // داخل MedicalRecordController
 public function store(Request $request)
 {
     $user = Auth::user();
-    // جلب معرف الدكتور المرتبط بالمستخدم المسجل
     $doctorId = $user->doctor?->id;
 
     if (!$doctorId && !$user->hasRole('admin')) {
@@ -34,7 +32,6 @@ public function store(Request $request)
         'notes' => 'nullable|string',
     ]);
 
-    // إضافة الـ doctor_id آلياً
     $validated['doctor_id'] = $doctorId;
 
     $record = MedicalRecord::create($validated);
